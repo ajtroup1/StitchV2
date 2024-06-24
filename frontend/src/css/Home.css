@@ -1,0 +1,80 @@
+.home-main {
+  background-color: white;
+  width: 100%;
+
+  padding-top: 20px;
+}
+
+.home-1-section {
+  width: 100%;
+  display: flex;
+}
+
+.left-home {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-home {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-right: 100px;
+}
+
+#collab-icon {
+  height: 500px;
+  width: auto;
+}
+
+.home-stitch-description {
+  letter-spacing: 0.1rem;
+  margin-top: -10px;
+}
+
+.home-2-section {
+  width: 100%;
+  /* background: #0081a1; */
+  background: linear-gradient(to top, #0081a1, white);
+}
+
+.login-home-main {
+  display: flex;
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+.login-home-left,
+.login-home-right {
+  padding-top: 60px;
+  width: 50%;
+  height: 100%;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#login-icon {
+  height: 200px;
+  width: auto;
+  color: white;
+}
+.login-text-description {
+  letter-spacing: 0.1rem;
+  font-size: large;
+  padding-top: 10px;
+}
+
+.login-btn {
+  margin-top: 10px;
+}
+
+.home-gradient-down {
+  height: 100px;
+  background: linear-gradient(to bottom, #0081a1, white);
+}

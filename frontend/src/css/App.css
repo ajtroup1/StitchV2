@@ -1,0 +1,84 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  background-color: blue;
+  width: 100vw;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.navbar-main {
+  background-color: white;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  color: black;
+  border-bottom: 3px solid #0081a1;
+}
+.nav-mid {
+  width: 15%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  cursor: pointer;
+}
+.nav-title {
+  font-size: xxx-large;
+  font-style: italic;
+  font-family: "Pacifico", cursive;
+}
+#nav-logo {
+  height: 90%;
+  width: auto;
+  transform: rotate(20deg);
+}
+.nav-left {
+  width: 37.5%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.nav-left a,
+.nav-right a {
+  color: #0081a1;
+  cursor: pointer;
+  text-decoration: underline;
+  display: inline-block;
+  transition: transform 0.3s ease;
+  font-size: larger;
+}
+.nav-left a:hover,
+.nav-right a:hover {
+  transform: scale(1.2);
+}
+.nav-right {
+  width: 37.5%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  gap: 30px;
+}
+#nav-profile-icon {
+  height: 80%;
+  width: auto;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+#nav-profile-icon:hover {
+  transform: scale(1.2);
+}
+
+.footer-main {
+  background-color: white;
+}
+
+#footer-logo {
+  height: 100px;
+  width: auto;
+  padding-right: 100px;
+}
