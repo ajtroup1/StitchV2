@@ -1,0 +1,70 @@
+.create-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top-create {
+  margin-top: 30px;
+  display: flex;
+  width: 95%;
+  padding-bottom: 20px;
+}
+
+.top-create-left,
+.top-create-right {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: x-large;
+  justify-content: center;
+  height: 300px;
+}
+
+.create-title-input {
+  width: 70%;
+  height: 30px;
+}
+
+.create-description-input {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.top-create-left-inner {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 5px;
+  align-items: center;
+  gap: 20px;
+}
+
+.appending-create {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: x-large;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.create-story-input {
+  height: 300px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.create-divider {
+  width: 80%;
+  height: 2px;
+  background-color: #0081a1;
+  margin: 50px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

@@ -38,8 +38,10 @@
 
 .home-2-section {
   width: 100%;
-  /* background: #0081a1; */
-  background: linear-gradient(to top, #0081a1, white);
+  background: #01a1ca;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  color: white;
 }
 
 .login-home-main {
@@ -72,9 +74,4 @@
 
 .login-btn {
   margin-top: 10px;
-}
-
-.home-gradient-down {
-  height: 100px;
-  background: linear-gradient(to bottom, #0081a1, white);
 }

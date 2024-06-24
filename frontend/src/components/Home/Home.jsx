@@ -33,7 +33,6 @@ function Home() {
       <div className="home-2-section">
         <HomeLogin />
       </div>
-      <div className="home-gradient-down"></div>
     </div>
   );
 }
