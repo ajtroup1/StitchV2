@@ -1,0 +1,246 @@
+.story-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: red;
+}
+
+.story-upper {
+  margin-top: 30px;
+  background-color: blue;
+  width: 95vw;
+  text-align: center;
+  padding: 20px; /* Added padding for spacing */
+}
+
+.story-title {
+  font-size: xxx-large;
+  font-style: italic;
+  font-family: "Pacifico", cursive;
+}
+
+.story-upper-inner {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: darkcyan;
+}
+
+.story-upper-left,
+.story-upper-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: green;
+  padding: 10px; /* Added padding for spacing */
+  height: 600px;
+}
+
+.story-upper-left {
+  gap: 40px;
+  width: 30%;
+  padding-bottom: 30px;
+}
+
+.story-upper-right {
+  width: 65%;
+  display: flex;
+  justify-content: center;
+}
+
+.user-profile-pics {
+  background-color: yellow;
+  width: 80%;
+  display: flex;
+  justify-content: flex-start; /* Start from the left */
+  padding: 10px; /* Added padding for spacing */
+  gap: 10px;
+}
+
+.story-profile-pic-container {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background-color: aqua;
+  transition: transform 0.3s ease; /* Transition property on the container */
+}
+
+#story-profile-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.3s ease; /* Transition property on the image */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.story-profile-pic-container:hover #story-profile-pic:hover {
+  transform: scale(1.2); /* Apply transform on hover to the image */
+}
+
+.story-plus-users {
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.story-plus-users p {
+  margin-left: 5px;
+}
+
+.story-upper-right-inner {
+  background-color: yellow;
+  width: 95%;
+  height: 95%;
+  overflow-x: auto;
+  padding: 20px;
+}
+
+.story-username {
+  font-size: xx-large;
+  text-decoration: underline;
+}
+
+.story-upper-top-left {
+  width: 100%;
+  height: 30%;
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.story-upper-bottom-left {
+  background-color: blue;
+  padding: 10px;
+  width: 100%;
+  height: 70%;
+  overflow-x: auto;
+}
+
+.story-comment-main {
+  width: 95%;
+  margin-top: 30px;
+  background-color: green;
+  overflow-x: auto;
+  height: 500px;
+}
+
+.indiv-comment-container {
+  background-color: blue;
+  margin: 20px;
+}
+
+.story-comment-profile-pic-container {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background-color: aqua;
+  transition: transform 0.3s ease; /* Transition property on the container */
+}
+
+#story-comment-profile-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.3s ease; /* Transition property on the image */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.story-comment-inner {
+  background-color: yellow;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.story-comment-content {
+  max-height: 150px;
+  overflow-x: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 10px;
+}
+
+.story-title-container {
+  display: flex;
+  background-color: turquoise;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.vote-container {
+  background-color: white;
+  height: 60px;
+  width: 35px;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inner-vote-ring {
+  position: relative;
+  width: calc(100% - 5px); /* Adjust width to account for border width */
+  height: calc(100% - 5px); /* Adjust height to account for border width */
+  border: 2px solid #0081a1; /* Color of the ring */
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3.5px;
+  box-sizing: border-box; /* Ensures padding is included in width and height */
+}
+
+.mid-vote-container {
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%; /* Ensure full width */
+}
+
+.upper-vote-container,
+.lower-vote-container {
+  flex: 1;
+  height: 35%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition for background-color */
+  border-radius: 50%;
+}
+
+.upper-vote-container:hover,
+.lower-vote-container:hover {
+  background-color: #0081a1; /* Change background color on hover */
+}
+
+
+.lower-vote-container {
+  height: 20px;
+}
+
+.upper-vote-container {
+  height: 20px;
+}
+
+.vote-count-text {
+  font-size: small;
+  margin: auto auto;
+  margin-top: -5px;
+}

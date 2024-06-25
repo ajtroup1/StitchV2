@@ -12,9 +12,10 @@ function Login() {
           />
         </div>
         <div className="login-form-container">
+          <p>Log in</p>
           <form>
             <div class="form-group">
-              <label for="exampleInputEmail1">Email address</label>
+              <label for="exampleInputEmail1">Username</label>
               <input
                 type="email"
                 class="form-control"
@@ -22,9 +23,6 @@ function Login() {
                 aria-describedby="emailHelp"
                 placeholder="Enter email"
               />
-              <small id="emailHelp" class="form-text text-muted">
-                We'll never share your email with anyone else.
-              </small>
             </div>
             <div class="form-group">
               <label for="exampleInputPassword1">Password</label>
@@ -35,25 +33,19 @@ function Login() {
                 placeholder="Password"
               />
             </div>
-            <div class="form-check">
-              <input
-                type="checkbox"
-                class="form-check-input"
-                id="exampleCheck1"
-              />
-              <label class="form-check-label" for="exampleCheck1">
-                Check me out
-              </label>
-            </div>
-            <button type="submit" class="btn btn-primary">
+            <button type="submit" class="btn btn-primary login-btn">
               Submit
             </button>
           </form>
         </div>
       </div>
 
-      <div className="login-upper">
+      <div
+        className="login-upper"
+        style={{ paddingTop: "50px", paddingBottom: "50px" }}
+      >
         <div className="login-form-container">
+          <p>Create an account</p>
           <form>
             <div class="form-group">
               <label for="exampleInputEmail1">Email address</label>
@@ -64,9 +56,6 @@ function Login() {
                 aria-describedby="emailHelp"
                 placeholder="Enter email"
               />
-              <small id="emailHelp" class="form-text text-muted">
-                We'll never share your email with anyone else.
-              </small>
             </div>
             <div class="form-group">
               <label for="exampleInputPassword1">Password</label>
@@ -76,16 +65,6 @@ function Login() {
                 id="exampleInputPassword1"
                 placeholder="Password"
               />
-            </div>
-            <div class="form-check">
-              <input
-                type="checkbox"
-                class="form-check-input"
-                id="exampleCheck1"
-              />
-              <label class="form-check-label" for="exampleCheck1">
-                Check me out
-              </label>
             </div>
             <button type="submit" class="btn btn-primary">
               Submit

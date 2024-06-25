@@ -7,6 +7,7 @@ import Home from "./Home/Home";
 import Browse from "./Browse/Browse";
 import Create from "./Create/Create"
 import Login from "./Login/Login";
+import Story from "./Story/Story";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/browse" element={<Browse />} />
         <Route path="/create" element={<Create />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/story" element={<Story />} />
       </Routes>
       <Footer />
     </div>
