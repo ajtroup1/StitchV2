@@ -1,0 +1,106 @@
+.profile-main {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+}
+
+.profile-left,
+.profile-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.profile-left {
+  width: 30%;
+  padding-top: 2.5%;
+  border-right: 3px solid #0081a1;
+}
+.profile-right {
+  width: 70%;
+}
+
+.profile-pic-container {
+  width: 250px;
+  height: auto;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background-color: aqua;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#profile-profile-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.profile-pic-container:hover {
+  transform: scale(1.2);
+}
+
+.profile-username {
+  padding-top: 10px;
+  font-size: x-large;
+}
+
+.three-stories-container {
+  width: 70vw;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.notepad-img-container {
+  position: relative;
+  width: 300px;
+  height: 400px; /* Adjust as needed */
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#notepad-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 10px; /* Adjust to position title and text */
+  left: 10px; /* Adjust to position title and text */
+  width: calc(80% - 20px); /* Ensure padding is accounted for */
+  height: calc(80% - 20px); /* Ensure padding is accounted for */
+  overflow-x: auto;
+  margin-top: 13.5%;
+  margin-left: 8%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.overlay h3 {
+  margin: 0;
+  font-size: 18px;
+  margin-bottom: 2px;
+}
+
+.overlay p {
+  margin-top: 5%;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.profile-three-fragment {
+  text-align: left;
+  margin-left: 20%;
+  width: 73%;
+}

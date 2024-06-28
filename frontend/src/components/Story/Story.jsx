@@ -309,19 +309,6 @@ function Story() {
     ],
   });
 
-  const [comments, setComments] = useState([]);
-
-  useEffect(() => {
-    const tempComments = [];
-    story.story_fragments.forEach((fragment) => {
-      fragment.fragment_comments.forEach((comment) => {
-        tempComments.push(comment.content);
-      });
-    });
-    setComments(tempComments);
-    console.log(tempComments);
-  }, [story != {}]);
-
   const formatDate = (createdAt) => {
     const date = new Date(createdAt);
     const mm = date.getMonth() + 1; // getMonth() is zero-based
@@ -338,45 +325,15 @@ function Story() {
     <div className="story-main">
       <div className="story-upper">
         <div className="story-title-container">
-          <p className="story-title">{story.title}</p>
-          <div className="vote-container">
-            <div className="inner-vote-ring">
-              <div className="upper-vote-container">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="12"
-                  height="12"
-                  fill="currentColor"
-                  class="bi bi-arrow-up"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5"
-                  />
-                </svg>
-              </div>
-              <div className="mid-vote-container">
-                <p className="vote-count-text">{story.votes_count}</p>
-              </div>
-              <div className="lower-vote-container">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="12"
-                  height="12"
-                  fill="currentColor"
-                  class="bi bi-arrow-down"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1"
-                  />
-                </svg>
-              </div>
+          <div className="story-title-inner">
+            <p className="story-title">{story.title}</p>
+            <div className="vote-container">
+              <div className="vote-upper">+</div>
+              <div className="vote-mid">{story.votes_count}</div>
+              <div className="vote-lower">-</div>
             </div>
           </div>
-          {/* <p>{story.votes_count}</p> */}
+          <div className="story-divider"></div>
         </div>
         <div className="story-upper-inner">
           <div className="story-upper-left">
@@ -399,6 +356,9 @@ function Story() {
                 )}
               </div>
             </div>
+            <p className="story-created-text">
+              Created {formatDate(story.created_at)}
+            </p>
             <div className="story-upper-bottom-left">
               <p>{story.description}</p>
             </div>
@@ -432,7 +392,7 @@ function Story() {
                   </p>
                 </div>
                 <div className="story-comment-content">
-                  <p>{comment.content}</p>
+                  <p className="comment-content">{comment.content}</p>
                 </div>
               </div>
             ))}

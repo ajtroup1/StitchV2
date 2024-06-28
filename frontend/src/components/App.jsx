@@ -8,6 +8,7 @@ import Browse from "./Browse/Browse";
 import Create from "./Create/Create"
 import Login from "./Login/Login";
 import Story from "./Story/Story";
+import Profile from "./Profile/Profile"
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/create" element={<Create />} />
         <Route path="/login" element={<Login />} />
         <Route path="/story" element={<Story />} />
+        <Route path="/profile" element={<Profile />}/>
       </Routes>
       <Footer />
     </div>

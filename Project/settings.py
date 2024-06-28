@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'corsheaders',  # Add this line
+    'backend.apps.BackendConfig',
 ]
 
 MIDDLEWARE = [
@@ -47,7 +49,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',  # Add this line
 ]
+
+CORS_ALLOW_ALL_ORIGINS = True
 
 ROOT_URLCONF = 'Project.urls'
 
@@ -75,8 +80,12 @@ WSGI_APPLICATION = 'Project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'alfivqdnriahs4gr',
+        'USER': 'qrecs3pww4qrcoko',
+        'PASSWORD': 'f2ua6rtb65s37hnp',
+        'HOST': 'tj5iv8piornf713y.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',   # Set to empty string for localhost.
+        'PORT': '3306',   # Set to empty string for default.
     }
 }
 

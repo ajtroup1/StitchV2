@@ -2,15 +2,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: red;
+  background-color: white;
 }
 
 .story-upper {
   margin-top: 30px;
-  background-color: blue;
+  background-color: #0081a1;
   width: 95vw;
   text-align: center;
-  padding: 20px; /* Added padding for spacing */
+  padding: 10px; /* Added padding for spacing */
+  border-radius: 20px;
+  padding-top: 10px;
+  padding-bottom: 20px;
 }
 
 .story-title {
@@ -23,7 +26,7 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  background-color: darkcyan;
+  background-color: #0081a1;
 }
 
 .story-upper-left,
@@ -32,30 +35,35 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: green;
+  background-color: white;
   padding: 10px; /* Added padding for spacing */
   height: 600px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .story-upper-left {
   gap: 40px;
-  width: 30%;
+  width: 31.5%;
   padding-bottom: 30px;
 }
 
 .story-upper-right {
-  width: 65%;
+  width: 67.5%;
   display: flex;
   justify-content: center;
 }
 
 .user-profile-pics {
-  background-color: yellow;
+  background-color: rgba(255, 255, 255, 0.8);
   width: 80%;
   display: flex;
   justify-content: flex-start; /* Start from the left */
   padding: 10px; /* Added padding for spacing */
   gap: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  margin-top: -15px;
 }
 
 .story-profile-pic-container {
@@ -66,20 +74,21 @@
   margin-right: 10px;
   margin-bottom: 10px;
   background-color: aqua;
-  transition: transform 0.3s ease; /* Transition property on the container */
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 
 #story-profile-pic {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
-  transition: transform 0.3s ease; /* Transition property on the image */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.story-profile-pic-container:hover #story-profile-pic:hover {
-  transform: scale(1.2); /* Apply transform on hover to the image */
+.story-profile-pic-container:hover{
+  transform: scale(1.2);
 }
 
 .story-plus-users {
@@ -93,7 +102,9 @@
 }
 
 .story-upper-right-inner {
-  background-color: yellow;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
   width: 95%;
   height: 95%;
   overflow-x: auto;
@@ -106,16 +117,19 @@
 }
 
 .story-upper-top-left {
-  width: 100%;
+  width: 95%;
   height: 30%;
-  background-color: red;
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  margin-top: 10px;
 }
 
+
 .story-upper-bottom-left {
-  background-color: blue;
   padding: 10px;
   width: 100%;
   height: 70%;
@@ -125,13 +139,14 @@
 .story-comment-main {
   width: 95%;
   margin-top: 30px;
-  background-color: green;
+  background-color: #0081a1;
   overflow-x: auto;
   height: 500px;
+  border-radius: 20px;
 }
 
 .indiv-comment-container {
-  background-color: blue;
+  background-color: white;
   margin: 20px;
 }
 
@@ -143,7 +158,21 @@
   margin-right: 10px;
   margin-bottom: 10px;
   background-color: aqua;
-  transition: transform 0.3s ease; /* Transition property on the container */
+  transition: transform 0.3s ease; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.comment-content {
+  padding-left: 30px;
+}
+
+.story-comment-profile-pic-container:hover {
+  transform: scale(1.2);
+}
+
+.story-created-text {
+  font-size: larger;
+  font-weight: bold;
 }
 
 #story-comment-profile-pic {
@@ -151,16 +180,17 @@
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
-  transition: transform 0.3s ease; /* Transition property on the image */
+  transition: transform 0.3s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .story-comment-inner {
-  background-color: yellow;
+  background-color: white;
   display: flex;
   gap: 5px;
   align-items: center;
   padding-left: 20px;
+  padding-top: 5px;
 }
 
 .story-comment-content {
@@ -172,75 +202,58 @@
 }
 
 .story-title-container {
+  background-color: rgb(255, 255, 255);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding-bottom: 20px;
+}
+
+.story-title-inner {
   display: flex;
-  background-color: turquoise;
   justify-content: center;
   align-items: center;
   gap: 20px;
 }
 
 .vote-container {
-  background-color: white;
-  height: 60px;
-  width: 35px;
-  border-radius: 50%;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.inner-vote-ring {
-  position: relative;
-  width: calc(100% - 5px); /* Adjust width to account for border width */
-  height: calc(100% - 5px); /* Adjust height to account for border width */
-  border: 2px solid #0081a1; /* Color of the ring */
-  border-radius: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  padding: 3.5px;
-  box-sizing: border-box; /* Ensures padding is included in width and height */
+  background-color: white;
+  border-radius: 50px;
+  height: 80px;
+  width: 2%;
+  border: 2px solid black; /* Add this line for a black border */
 }
 
-.mid-vote-container {
-  height: 30%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%; /* Ensure full width */
-}
 
-.upper-vote-container,
-.lower-vote-container {
-  flex: 1;
-  height: 35%;
+.vote-upper,
+.vote-mid,
+.vote-lower {
+  height: 33.33333333333333333333333333%;
+  /* background-color: blue; */
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: background-color 0.3s ease; /* Smooth transition for background-color */
+}
+
+.vote-upper,
+.vote-lower {
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
 }
 
-.upper-vote-container:hover,
-.lower-vote-container:hover {
-  background-color: #0081a1; /* Change background color on hover */
+.vote-upper:hover,
+.vote-lower:hover {
+  background-color: rgb(240, 240, 240);
+  cursor: pointer;
 }
 
-
-.lower-vote-container {
-  height: 20px;
-}
-
-.upper-vote-container {
-  height: 20px;
-}
-
-.vote-count-text {
-  font-size: small;
-  margin: auto auto;
-  margin-top: -5px;
+.story-divider {
+  width: 80%;
+  height: 2px;
+  background-color: #0081a1;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
