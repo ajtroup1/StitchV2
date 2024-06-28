@@ -12,8 +12,6 @@
   text-align: center;
   padding: 10px; /* Added padding for spacing */
   border-radius: 20px;
-  padding-top: 10px;
-  padding-bottom: 20px;
 }
 
 .story-title {
@@ -43,9 +41,12 @@
 }
 
 .story-upper-left {
+  position: relative;
+}
+
+.story-upper-left {
   gap: 40px;
   width: 31.5%;
-  padding-bottom: 30px;
 }
 
 .story-upper-right {
@@ -58,7 +59,7 @@
   background-color: rgba(255, 255, 255, 0.8);
   width: 80%;
   display: flex;
-  justify-content: flex-start; /* Start from the left */
+  justify-content: space-evenly;
   padding: 10px; /* Added padding for spacing */
   gap: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -76,8 +77,8 @@
   background-color: aqua;
   transition: transform 0.3s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  
 }
-
 
 #story-profile-pic {
   width: 100%;
@@ -87,7 +88,26 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.story-profile-pic-container:hover{
+.profile-card {
+  position: absolute;
+  top: 35.5%;
+  left: 17.5%;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  z-index: 1000; /* Ensure it's above other content */
+  display: none; /* Initially hide the card */
+  width: 300px; /* Adjust width as needed */
+  height: 50px;
+  background-color: red; /* Change background color */
+  font-size: medium;
+  /* Add any other styles as needed */
+}
+
+.story-profile-pic-container:hover .profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   transform: scale(1.2);
 }
 
@@ -125,9 +145,9 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 10px;
-  margin-top: 10px;
+  margin-top: -30px;
+  margin-bottom: 50px;
 }
-
 
 .story-upper-bottom-left {
   padding: 10px;
@@ -158,7 +178,7 @@
   margin-right: 10px;
   margin-bottom: 10px;
   background-color: aqua;
-  transition: transform 0.3s ease; 
+  transition: transform 0.3s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -226,7 +246,6 @@
   border: 2px solid black; /* Add this line for a black border */
 }
 
-
 .vote-upper,
 .vote-mid,
 .vote-lower {
@@ -257,3 +276,4 @@
   margin: 0 auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+

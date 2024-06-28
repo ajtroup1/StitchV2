@@ -22,7 +22,7 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 .nav-title {
   font-size: xxx-large;
@@ -69,6 +69,7 @@
   border-radius: 50%;
   transition: transform 0.3s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
 }
 
 #nav-profile-icon:hover {

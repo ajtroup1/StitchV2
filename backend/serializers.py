@@ -10,21 +10,21 @@ class UserSerializer(serializers.ModelSerializer):
             'password': {'write_only': True}
         }
 
-class StorySerializer(serializers.ModelSerializer):
-    user = UserSerializer(read_only=True)
-
-    class Meta:
-        model = Story
-        fields = ['id', 'user', 'title', 'description', 'private', 'created_at', 'votes_count']
-
 class FragmentSerializer(serializers.ModelSerializer):
     user = UserSerializer(read_only=True)
-    story = StorySerializer(read_only=True)
     parent_fragment = serializers.PrimaryKeyRelatedField(queryset=Fragment.objects.all(), allow_null=True)
 
     class Meta:
         model = Fragment
-        fields = ['id', 'story', 'user', 'parent_fragment', 'content', 'created_at']
+        fields = ['id', 'user', 'parent_fragment', 'content', 'created_at']
+
+class StorySerializer(serializers.ModelSerializer):
+    user = UserSerializer(read_only=True)
+    fragments = FragmentSerializer(many=True, read_only=True, source='story_fragments')
+
+    class Meta:
+        model = Story
+        fields = ['id', 'user', 'title', 'description', 'private', 'created_at', 'votes_count', 'fragments']
 
 class CommentSerializer(serializers.ModelSerializer):
     user = UserSerializer(read_only=True)

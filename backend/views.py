@@ -115,6 +115,15 @@ class CreateUser(APIView):
             return Response({"error": str(e)}, status=status.HTTP_400_BAD_REQUEST)
         
 # STORY
+class GetStory(APIView):
+    def get(self, request, id):
+        story = Story.objects.filter(id=id).prefetch_related('story_fragments').first()
+        if not story:
+            return Response({"error": "Story not found."}, status=status.HTTP_404_NOT_FOUND)
+        
+        serializer = StorySerializer(story)
+        return Response({"story": serializer.data}, status=status.HTTP_200_OK)
+    
 class CreateStory(APIView):
     def post(self, request):
         username = request.data.get('username')

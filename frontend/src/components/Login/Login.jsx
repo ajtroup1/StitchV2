@@ -39,6 +39,7 @@ function Login() {
         response.json().then((data) => {
           if (response.status === 200) {
             Cookies.set('routeUser', loginInfo.username)
+            Cookies.set('loggedIn', true)
             navigate('/profile')
           } else {
             alert(data.error);

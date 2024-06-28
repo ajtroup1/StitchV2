@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 import "../../css/Profile.css";
+import { useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
 
 function Profile() {
+    const navigate = useNavigate();
   const [routeUser, setRouteUser] = useState(Cookies.get("routeUser"));
   const [user, setUser] = useState({});
   const [loading, setLoading] = useState(true);
@@ -80,7 +82,7 @@ function Profile() {
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lacus vel facilisis volutpat est velit egestas dui id ornare. Lorem ipsum dolor sit amet. Cras ornare arcu dui vivamus arcu felis bibendum ut. Ullamcorper dignissim cras tincidunt lobortis. Tellus at urna condimentum mattis. Semper feugiat nibh sed pulvinar proin gravida hendrerit lectus. Fringilla phasellus faucibus scelerisque eleifend. Pharetra diam sit amet nisl suscipit adipiscing. Nibh cras pulvinar mattis nunc sed blandit libero. Aliquam ultrices sagittis orci a scelerisque purus semper eget duis. Dignissim suspendisse in est ante. Morbi tristique senectus et netus et. Egestas integer eget aliquet nibh. Morbi tincidunt augue interdum velit euismod. Mauris a diam maecenas sed enim ut sem. Mattis nunc sed blandit libero. Vel pharetra vel turpis nunc eget lorem dolor sed.",
         },
       ],
-      private: false,
+      private: true,
       votes_count: 25,
     },
   ]);
@@ -111,6 +113,11 @@ function Profile() {
     }
   }, [routeUser]);
 
+  const goToStory = (id) => {
+    Cookies.set('storyID', id)
+    navigate('/story')
+  }
+ 
   return (
     <div className="profile-main">
       {loading ? (
@@ -141,13 +148,25 @@ function Profile() {
                       id="notepad-img"
                       alt="Story Notepad"
                     />
+                    <h3 className="profile-story-title" onClick={() => {goToStory(story.id)}}>{story.title}</h3>
+                    {story.private && (
+                      <div className="private-icon-container">
+                        <img
+                          src="https://cdn-icons-png.flaticon.com/512/876/876769.png"
+                          id="profile-private-icon"
+                          alt="Private Icon"
+                        />
+                        <p className="profile-private-text">*Private</p>
+                      </div>
+                    )}
                     <div className="overlay">
-                      <h3>{story.title}</h3>
                       <div className="notepad-text">
                         {story.fragments.map((fragment) => (
                           <div key={fragment.id}>
-                            <p >{fragment.user.username}</p>
-                            <p className="profile-three-fragment">{fragment.content}</p>
+                            <p>{fragment.user.username}</p>
+                            <p className="profile-three-fragment">
+                              {fragment.content}
+                            </p>
                           </div>
                         ))}
                       </div>
